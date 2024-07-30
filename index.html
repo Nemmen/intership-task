@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form replica in Material ui</title>
+    <title>Form replica in Material UI</title>
 
     <!-- Google Fonts -->
     <link
@@ -37,6 +37,29 @@
       href="./plugins/bootstrap-datepicker/css/bootstrap-datepicker.css"
       rel="stylesheet"
     />
+    <!-- Colorpicker Css -->
+    <link
+      href="./plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css"
+      rel="stylesheet"
+    />
+
+    <!-- Dropzone Css -->
+    <link href="./plugins/dropzone/dropzone.css" rel="stylesheet" />
+
+    <!-- Multi Select Css -->
+    <link href="./plugins/multi-select/css/multi-select.css" rel="stylesheet" />
+
+    <!-- Bootstrap Spinner Css -->
+    <link
+      href="./plugins/jquery-spinner/css/bootstrap-spinner.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Tagsinput Css -->
+    <link
+      href="./plugins/bootstrap-tagsinput/bootstrap-tagsinput.css"
+      rel="stylesheet"
+    />
 
     <!-- Wait Me Css -->
     <link href="./plugins/waitme/waitMe.css" rel="stylesheet" />
@@ -47,6 +70,9 @@
       rel="stylesheet"
     />
 
+    <!-- noUISlider Css -->
+    <link href="./plugins/nouislider/nouislider.min.css" rel="stylesheet" />
+
     <!-- Custom Css -->
     <link href="./css/style.css" rel="stylesheet" />
 
@@ -54,7 +80,16 @@
     <link href="./css/themes/all-themes.css" rel="stylesheet" />
   </head>
   <body>
-    <h1></h1>
+    <div class="alert alert-danger hidden alert-dismissible" role="alert">
+      <button
+        type="button"
+        class="closed"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <div class="container">
       <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -69,9 +104,7 @@
                 method="POST"
               >
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Project_Type"
                       ><span style="color: red">*</span>Project Type:</label
                     >
@@ -100,9 +133,7 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Course_Name"
                       ><span style="color: red">*</span>Course Name :</label
                     >
@@ -122,12 +153,10 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Title"
-                      ><span style="color: red">*</span>Title :
-                    </label>
+                      ><span style="color: red">*</span>Title :</label
+                    >
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -144,12 +173,10 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Abstract"
-                      ><span style="color: red">*</span>Abstract :
-                    </label>
+                      ><span style="color: red">*</span>Abstract :</label
+                    >
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -167,12 +194,10 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Project_Members"
-                      >Project Members (Outside Institute) :
-                    </label>
+                      >Project Members (Outside Institute) :</label
+                    >
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -181,71 +206,83 @@
                           type="text"
                           id="Project_Members"
                           class="form-control"
-                          placeholder="project members outsite institute"
+                          placeholder="project members outside institute"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
-                    <label for="Project_Start_Date :"
-                      ><span style="color: red">*</span> Project Start Date :
-                    </label>
-                  </div>
-                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                      <div class="form-line">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="date"
-                          placeholder="Date"
-                          required
-                        />
+
+                <div class="body">
+                  <div  class="demo-masked-input">
+                    <div class="row clearfix">
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
+                        <label for="Project_Start_Date"
+                          ><span style="color: red">*</span> Project Start Date
+                          :</label
+                        >
                       </div>
-                      <div class="help-info">YYYY-MM-DD format</div>
+                      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">date_range</i>
+                            </span>
+                            <div class="form-line">
+                              <input
+                                type="text"
+                                class="form-control date"
+                                
+                                placeholder="Ex: 30/07/2016"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="body">
+                  <div class="demo-masked-input">
+                    <div class="row clearfix">
+                      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
+                        <label for="Project_end_Date"
+                          ><span style="color: red">*</span> Project End Date
+                          :</label
+                        >
+                      </div>
+                      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">date_range</i>
+                            </span>
+                            <div class="form-line">
+                              <input
+                                type="text"
+                                class="form-control date"
+                                placeholder="Ex: 30/07/2016"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
-                    <label for="Project_end_Date"
-                      ><span style="color: red">*</span> Project end Date :
-                    </label>
-                  </div>
-                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                      <div class="form-line">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="date"
-                          placeholder="Date"
-                          required
-                        />
-                      </div>
-                      <div class="help-info">YYYY-MM-DD format</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
-                    <label for="GitHub_Link:"
-                      ><span style="color: red">*</span> GitHub Link:
-                    </label>
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
+                    <label for="GitHub_Link"
+                      ><span style="color: red">*</span> GitHub Link:</label
+                    >
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
                       <div class="form-line">
                         <input
                           type="url"
+                          id="GitHub_Link"
                           class="form-control"
                           name="url"
                           required
@@ -255,10 +292,8 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5 " 
-                  >
-                    <label class=""  for="Tag_Students"
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
+                    <label for="Tag_Students"
                       ><span style="color: red">*</span>Tag Students:</label
                     >
                   </div>
@@ -277,11 +312,9 @@
                   </div>
                 </div>
                 <div class="row clearfix">
-                  <div
-                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
-                  >
+                  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5">
                     <label for="Document_Proof"
-                      ><span style="color: red">*</span>Document Proof : (pdf
+                      ><span style="color: red">*</span>Document Proof: (pdf
                       formats allowed)</label
                     >
                   </div>
@@ -289,13 +322,23 @@
                     <div class="form-group">
                       <div class="form-line">
                         <div class="body">
-                          <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
-                             
-                              <div class="fallback">
-                                  <input name="file" type="file" multiple required/>
-                              </div>
+                          <form
+                            action="/"
+                            id="frmFileUpload"
+                            class="dropzone"
+                            method="post"
+                            enctype="multipart/form-data"
+                          >
+                            <div class="fallback">
+                              <input
+                                name="file"
+                                type="file"
+                                multiple
+                                required
+                              />
+                            </div>
                           </form>
-                      </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -307,6 +350,7 @@
                     <button
                       class="btn m-b-20 btn-primary waves-effect"
                       type="submit"
+                      onclick="handleSubmit(event)"
                     >
                       SUBMIT
                     </button>
@@ -325,10 +369,67 @@
       </div>
     </div>
     <script>
-      document.getElementById("Abstract").addEventListener("input", function () {
-        document.getElementById("Abstract_count").textContent =
-          500 - this.value.length;
-      });
+      function closeHandle() {
+        document.querySelector(".alert").classList.add("hidden");
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = document.getElementById("form_advanced_validation");
+        const formData = new FormData(form);
+
+        const requiredFields = form.querySelectorAll("[required]");
+        let allFilled = true;
+
+        requiredFields.forEach((field) => {
+          if (!field.value.trim()) {
+            allFilled = false;
+            field.classList.add("is-invalid");
+          } else {
+            field.classList.remove("is-invalid");
+          }
+        });
+
+        const urlField = document.getElementById("GitHub_Link");
+        const urlPattern = new RegExp(
+          "^(https?:\\/\\/)?" +
+            "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|" +
+            "((\\d{1,3}\\.){3}\\d{1,3}))" +
+            "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" +
+            "(\\?[;&a-z\\d%_.~+=-]*)?" +
+            "(\\#[-a-z\\d_]*)?$",
+          "i"
+        );
+
+        if (!allFilled) {
+          showAlert("Please fill all required fields.");
+          return false;
+        } else if (urlField && !urlPattern.test(urlField.value)) {
+          showAlert("Please enter a valid URL.");
+          urlField.classList.add("is-invalid");
+          return false;
+        } else {
+          showAlert("Form submitted successfully.", "success");
+        }
+      }
+
+      function showAlert(message, type = "danger") {
+        const alertBox = document.querySelector(".alert");
+        alertBox.classList.remove("hidden", "alert-danger", "alert-success");
+        alertBox.classList.add(`alert-${type}`);
+        alertBox.innerHTML = `
+        <button type="button" class="close" onClick="return closeHandle();">
+            <span aria-hidden="true">&times;</span>
+        </button> ${message}`;
+      }
+
+      document
+        .getElementById("Abstract")
+        .addEventListener("input", function () {
+          document.getElementById("Abstract_count").textContent =
+            500 - this.value.length;
+        });
     </script>
 
     <!-- Jquery Core Js -->
@@ -349,6 +450,27 @@
     <!-- JQuery Steps Plugin Js -->
     <script src="./plugins/jquery-steps/jquery.steps.js"></script>
 
+    <!-- Bootstrap Colorpicker Js -->
+    <script src="./plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+
+    <!-- Dropzone Plugin Js -->
+    <script src="./plugins/dropzone/dropzone.js"></script>
+
+    <!-- Input Mask Plugin Js -->
+    <script src="./plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+
+    <!-- Multi Select Plugin Js -->
+    <script src="./plugins/multi-select/js/jquery.multi-select.js"></script>
+
+    <!-- Jquery Spinner Plugin Js -->
+    <script src="./plugins/jquery-spinner/js/jquery.spinner.js"></script>
+
+    <!-- Bootstrap Tags Input Plugin Js -->
+    <script src="./plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+    <!-- noUISlider Plugin Js -->
+    <script src="./plugins/nouislider/nouislider.js"></script>
+
     <!-- Sweet Alert Plugin Js -->
     <script src="./plugins/sweetalert/sweetalert.min.js"></script>
 
@@ -358,6 +480,7 @@
     <!-- Custom Js -->
     <script src="./admin.js"></script>
     <script src="./form-validation.js"></script>
+    <script src="./advanced-form-elements.js"></script>
 
     <!-- Demo Js -->
     <script src="./demo.js"></script>
