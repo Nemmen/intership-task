@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form replica in Material ui</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Bootstrap Core Css -->
+    <link href="./plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="./plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="./plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap DatePicker Css -->
+    <link
+      href="./plugins/bootstrap-datepicker/css/bootstrap-datepicker.css"
+      rel="stylesheet"
+    />
+
+    <!-- Wait Me Css -->
+    <link href="./plugins/waitme/waitMe.css" rel="stylesheet" />
+
+    <!-- Bootstrap Select Css -->
+    <link
+      href="./plugins/bootstrap-select/css/bootstrap-select.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Css -->
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="./css/themes/all-themes.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1></h1>
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="header">
+              <h2>ADD NEW PROJECT INFORMATION</h2>
+            </div>
+            <div class="body">
+              <form
+                class="form-horizontal"
+                id="form_advanced_validation"
+                method="POST"
+              >
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Project_Type"
+                      ><span style="color: red">*</span>Project Type:</label
+                    >
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line bg-secondary">
+                        <select
+                          class="form-control show-tick"
+                          id="Project_Type"
+                          required
+                        >
+                          <option value="">-- select --</option>
+                          <option value="Credit Project(curricular)">
+                            Credit Project(curricular)
+                          </option>
+                          <option value="Non-Credit Project(curricular)">
+                            Non-Credit Project(curricular)
+                          </option>
+                          <option value="Personal Project(non-curricular)">
+                            Personal Project(non-curricular)
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Course_Name"
+                      ><span style="color: red">*</span>Course Name :</label
+                    >
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          id="course_name"
+                          class="form-control"
+                          placeholder="Type here"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Title"
+                      ><span style="color: red">*</span>Title :
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          id="Title"
+                          class="form-control"
+                          placeholder=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Abstract"
+                      ><span style="color: red">*</span>Abstract :
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <textarea
+                          id="Abstract"
+                          class="form-control"
+                          placeholder=""
+                          required
+                          maxlength="500"
+                        ></textarea>
+                      </div>
+                      You have <span id="Abstract_count">500</span> characters
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Project_Members"
+                      >Project Members (Outside Institute) :
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          id="Project_Members"
+                          class="form-control"
+                          placeholder="project members outsite institute"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Project_Start_Date :"
+                      ><span style="color: red">*</span> Project Start Date :
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="date"
+                          placeholder="Date"
+                          required
+                        />
+                      </div>
+                      <div class="help-info">YYYY-MM-DD format</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Project_end_Date"
+                      ><span style="color: red">*</span> Project end Date :
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="date"
+                          placeholder="Date"
+                          required
+                        />
+                      </div>
+                      <div class="help-info">YYYY-MM-DD format</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="GitHub_Link:"
+                      ><span style="color: red">*</span> GitHub Link:
+                    </label>
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="url"
+                          class="form-control"
+                          name="url"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5 " 
+                  >
+                    <label class=""  for="Tag_Students"
+                      ><span style="color: red">*</span>Tag Students:</label
+                    >
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <input
+                          type="text"
+                          id="Tag_Students"
+                          class="form-control"
+                          placeholder="Type a student name.."
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-2 col-md-2 col-sm-4 col-xs-5  "
+                  >
+                    <label for="Document_Proof"
+                      ><span style="color: red">*</span>Document Proof : (pdf
+                      formats allowed)</label
+                    >
+                  </div>
+                  <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                    <div class="form-group">
+                      <div class="form-line">
+                        <div class="body">
+                          <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
+                             
+                              <div class="fallback">
+                                  <input name="file" type="file" multiple required/>
+                              </div>
+                          </form>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div
+                    class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5"
+                  >
+                    <button
+                      class="btn m-b-20 btn-primary waves-effect"
+                      type="submit"
+                    >
+                      SUBMIT
+                    </button>
+                    <button
+                      class="btn m-b-20 btn-primary waves-effect"
+                      type="reset"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("Abstract").addEventListener("input", function () {
+        document.getElementById("Abstract_count").textContent =
+          500 - this.value.length;
+      });
+    </script>
+
+    <!-- Jquery Core Js -->
+    <script src="./plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="./plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="./plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="./plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Jquery Validation Plugin Css -->
+    <script src="./plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- JQuery Steps Plugin Js -->
+    <script src="./plugins/jquery-steps/jquery.steps.js"></script>
+
+    <!-- Sweet Alert Plugin Js -->
+    <script src="./plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="./plugins/node-waves/waves.js"></script>
+
+    <!-- Custom Js -->
+    <script src="./admin.js"></script>
+    <script src="./form-validation.js"></script>
+
+    <!-- Demo Js -->
+    <script src="./demo.js"></script>
+  </body>
+</html>
